@@ -13,16 +13,33 @@
 
     - [Source](https://www.youtube.com/watch?v=gvicrj31JOM)
 
-* Explain how prototypal inheritance works.
+3. Explain how prototypal inheritance works.
 
     - JavaScript only has one construct: objects. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
 
     - [Source](https://medium.com/@nupoor_neha/javascript-front-end-interview-questions-1cbc5e32792b)
 
-* What's the difference between a variable that is: `null`, `undefined` or undeclared?
+4. What's the difference between a variable that is: `null`, `undefined` or undeclared?
   * How would you go about checking for any of these states?
-* What is a closure, and how/why would you use one?
-* What language constructions do you use for iterating over object properties and array items?
+
+    - undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’.
+    - null is a value of a variable and is a type of object.
+    - We can use ‘console.log();’ and ‘type of’ to check if a variable is undefined or null.
+    - undeclared variables is a variable that has been declared without ‘var’ keyword.
+
+5. What is a closure, and how/why would you use one?
+
+    - A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.
+
+    - Closures are inner functions inside of an outer function. They have their own local scope and has access to outer function’s scope, parameters (but NOT arguments object), and they also have access to global variables.
+    - Closures is a neat way to deal with scope issues. Reasons we use Closures is because Javascript is a function-level scope rather than as with other languages, block-level scope and Javascript is an asynchronous/event driven language. Example that Closure is frequently used is jQuery (ex. click()).
+
+    - [Source](https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
+
+6. What language constructions do you use for iterating over object properties and array items?
+
+    -   for loop, for..in, forEach, map, filter 
+
 * Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
 * What's a typical use case for anonymous functions?
 * What's the difference between host objects and native objects?
