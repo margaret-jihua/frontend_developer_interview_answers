@@ -40,11 +40,32 @@
 
     -   for loop, for..in, forEach, map, filter 
 
-* Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
-* What's a typical use case for anonymous functions?
-* What's the difference between host objects and native objects?
-* Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+7. Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
+
+    - forEach() — executes a provided function once for each array element.
+    - map() — creates a new array with the results of calling a provided function on every element in the calling array.
+    - The forEach() method doesn’t return anything. It simply calls a provided function on each element in the array. This callback is allowed to mutate the calling array.Meanwhile, the map() method will also call a provided function on every element in the array. The difference is that map() returns a new Array of the same size.
+
+8. What's a typical use case for anonymous functions?
+
+    - Anonymous Functions are function expressions (rather than the regular function declaration which are statements. Function expressions are more flexible.) We can assign functions to variables, object properties, pass them as arguments to other functions, and even write a simple one line code enclosed in an anonymous functions.
+
+    `var squaredArray = inputArray.map(function(x) { return x * x; });`
+
+    `var squaredArray = inputArray.map(x => x * x);`
+
+9. What's the difference between host objects and native objects?
+
+    - [Source](https://medium.com/@rlynjb/js-interview-question-what-s-the-difference-between-host-objects-and-native-objects-b395f7c5fbf1)
+
+10. Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+
+    - 
+
+11. Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+
+    - first one is declaration defined at parse time while the other is expression defined at run time.
+
 * Can you explain what `Function.call` and `Function.apply` do? What's the notable difference between the two?
 * Explain `Function.prototype.bind`.
 * What's the difference between feature detection, feature inference, and using the UA string?
@@ -53,7 +74,10 @@
 * Describe event capturing.
 * What's the difference between an "attribute" and a "property"?
 * What are the pros and cons of extending built-in JavaScript objects?
-* What is the difference between `==` and `===`?
+20. What is the difference between `==` and `===`?
+
+    - `=` is called as assignment operator, `==` is called as comparison operator whereas It is also called as comparison operator. `=` does not return true or false, `==` Return true only if the two operands are equal while `===` returns true only if both values and data types are the same for the two variables
+
 * Explain the same-origin policy with regards to JavaScript.
 * Why is it called a Ternary operator, what does the word "Ternary" indicate?
 * What is strict mode? What are some of the advantages/disadvantages of using it?
@@ -92,3 +116,11 @@ console.log("hello" || "world")
 console.log("foo" && "bar")
 ```
 * Write an immediately invoked function expression (IIFE)
+```
+(function() {
+  console.log("I am an IIFE!")
+  console.log("You cannot call me again because I am anonymous function.")
+  console.log("BUT, I still am going to run because I have been immediately called after I was defined.")
+})();
+```
+(https://www.freecodecamp.org/news/learn-these-core-javascript-concepts-in-just-a-few-minutes-f7a16f42c1b0/)
